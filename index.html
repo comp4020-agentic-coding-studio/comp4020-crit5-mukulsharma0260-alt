@@ -3,36 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COMP4020 prototype</title>
-    <meta
-      name="description"
-      content="Replace this with one sentence saying what this page is. A search result and a link preview both show it."
-    />
-
-    <!--
-      The link-preview card: public/card.png, 1200x630 --- replace it. The URL
-      resolves against this page, like any link. No og:title/og:description:
-      scrapers fall back to the <title> and description above.
-    -->
+    <title>Wake</title>
+    <meta name="description" content="Wake: a lantern in a graveyard at night." />
+    <meta name="theme-color" content="#05070b" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./card.png" />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background: #05070b;
+        overflow: hidden;
+        touch-action: none;
+        cursor: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+      #score {
+        position: fixed;
+        top: max(16px, env(safe-area-inset-top));
+        left: 0;
+        right: 0;
+        text-align: center;
+        font: 600 clamp(30px, 7vw, 58px)/1 ui-rounded, "Avenir Next", system-ui, -apple-system, sans-serif;
+        font-variant-numeric: tabular-nums;
+        color: #e8f4ff;
+        opacity: 0.16;
+        letter-spacing: 0.06em;
+        pointer-events: none;
+        text-shadow: 0 0 28px rgba(150, 220, 255, 0.5);
+        transition: opacity 0.25s, transform 0.25s;
+      }
+      #score.big {
+        opacity: 0.9;
+        transform: scale(1.3);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #score {
+          transition: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <nav aria-label="Primary">
-        <a href="./">Home</a>
-      </nav>
-    </header>
-    <main>
-      <h1>COMP4020 prototype</h1>
-      <p>
-        Replace this with your prototype. This week's brief is on the course website;
-        <code>spec/README.md</code> explains how the checks in this repo relate to it.
-      </p>
-    </main>
-    <script type="module" src="./main.ts"></script>
+    <nav class="visually-hidden" aria-hidden="true"></nav>
+    <h1 class="visually-hidden">Wake</h1>
+    <canvas id="c"></canvas>
+    <div id="score">0</div>
+    <script type="module" src="./src/scripts/wake/main.ts"></script>
   </body>
 </html>
