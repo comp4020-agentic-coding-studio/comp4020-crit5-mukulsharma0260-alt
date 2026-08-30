@@ -1,0 +1,7 @@
+# Crit 5 reflection
+
+What I'm proudest of in Wake is that it teaches itself. There's no instruction text: moving the lantern toward the only warm, moving thing in a cold graveyard is the obvious first action, and once you've collected it, your own route reappears as a wraith. That taught me something about depth — you don't need many mechanics if the player's success is what creates the next hazard. I kept the core rule deliberately narrow and pure: touching a wraith ends the round, and I kept that rule consistent throughout.
+
+The bigger lesson this week was about my own harness, not the game. I'd carried conventions forward from Crit 4 — requiring multiple input modes, avoiding meaning through motion and colour alone — and some of those didn't fit Wake at all. I had to actually reconcile old assumptions against this brief rather than copying them across automatically. Related to that, I caught myself almost accepting an agent edit that duplicated an old line instead of replacing it; directing an agent well means reading the diff it actually produced, not just trusting the description of what it meant to do.
+
+Playtesting at both marking sizes told me the game already read as fair and understandable, so instead of inventing a problem, I made one small, honest visibility tweak and kept it because it helped without distracting. What I'd carry forward: stay narrow, test the rules automatically, and trust human play for judgement about feel.
