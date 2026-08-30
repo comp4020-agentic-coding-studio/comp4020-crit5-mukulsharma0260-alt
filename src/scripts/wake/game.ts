@@ -203,7 +203,7 @@ export function startGame(canvas: HTMLCanvasElement, scoreEl: HTMLElement): void
       ctx.beginPath();
       ctx.moveTo(path[0]!.x, path[0]!.y);
       for (let i = 1; i < path.length; i++) ctx.lineTo(path[i]!.x, path[i]!.y);
-      ctx.strokeStyle = "rgba(140,205,245,.11)";
+      ctx.strokeStyle = "rgba(140,205,245,.15)";
       ctx.lineWidth = 2;
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
